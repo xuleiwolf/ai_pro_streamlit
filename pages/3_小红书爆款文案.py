@@ -8,14 +8,14 @@ from 应用工具包 import utils2
 
 st.header("小红书爆款文案AI写作助手 ✏️")
 with st.sidebar:
-    api_key = st.text_input("请输入百度千问密钥：", type="password")
-    st.markdown("[获取百度千问密钥，有免费额度的](https://bailian.console.aliyun.com/cn-beijing?tab=model#/api-key)")
+    api_key = st.text_input("请输入阿里云千问密钥：", type="password")
+    st.markdown("[获取阿里云千问密钥，有免费额度的](https://bailian.console.aliyun.com/cn-beijing?tab=model#/api-key)")
 
 theme = st.text_input("主题")
 submit = st.button("开始写作")
 
 if submit and not api_key:
-    st.info("请输入你的百度千问密钥")
+    st.info("请输入你的阿里云千问密钥")
     st.stop()
 if submit and not theme:
     st.info("请输入生成内容的主题")
