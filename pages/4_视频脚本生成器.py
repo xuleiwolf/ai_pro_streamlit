@@ -9,8 +9,8 @@ from 应用工具包 import utils1
 st.title("🎬 视频脚本生成器")
 
 with st.sidebar:
-    openai_api_key = st.text_input("请输入百度千问密钥：", type="password")
-    st.markdown("[获取百度千问密钥，有免费额度的](https://bailian.console.aliyun.com/cn-beijing?tab=model#/api-key)")
+    openai_api_key = st.text_input("请输入阿里云千问密钥：", type="password")
+    st.markdown("[获取阿里云千问密钥，有免费额度的](https://bailian.console.aliyun.com/cn-beijing?tab=model#/api-key)")
 
 subject = st.text_input("💡 请输入视频的主题")
 video_length = st.number_input("⏱️ 请输入视频的大致时长（单位：分钟）", min_value=0.1, step=0.1)
@@ -19,7 +19,7 @@ creativity = st.slider("✨ 请输入视频脚本的创造力（数字小说明�
 submit = st.button("生成脚本")
 
 if submit and not openai_api_key:
-    st.info("请输入你的百度千问密钥")
+    st.info("请输入你的阿里云千问密钥")
     st.stop()
 if submit and not subject:
     st.info("请输入视频的主题")
